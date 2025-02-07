@@ -1,2 +1,2 @@
-# SAP_Slow-Moving-Inventory-Management-
+# SAP_Inventory-Management-
 SAP SLOW-MOVING INVENTORY MANAGEMENT SYSTEM
