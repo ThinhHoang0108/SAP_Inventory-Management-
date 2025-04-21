@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: com.sap.rap.saprap
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: https://e585c878-140f-4c57-ae5a-b224dcbf7dfb.abap.ap21.hana.ondemand.com
+          scp: true
+        app:
+          name: ZU_02_TRAVEL
+          description: sap rap testing crossing
+          package: ZRAP_THING
+          transport: TRLK901448
+        exclude:
+          - /test/
